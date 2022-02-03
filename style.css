@@ -1,0 +1,146 @@
+ /* Name Selectors */
+ @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap');
+button{
+   background-color: crimson;
+    color: darkgrey;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+     cursor: pointer;  
+} 
+  
+/* id & class selectors  */
+#group {
+    padding: 20px;
+    display: flex;
+    font-family: 'Courier New';
+    gap: 20px;
+    background-color: rgb(216, 213, 223);
+    margin: 20px 0px;
+    border-radius: 5px;
+    border: 1px solid blue;
+}
+
+.item{
+    background-color: skyblue;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    gap: 20px;
+}
+
+/* Decendant Selectors */
+.list-group{
+    padding: 20px;
+    background-color: rgb(216, 196, 196);
+}
+.list-group li {
+    padding: 10px;
+    border: 1px solid crimson;
+    border-radius: 10px;
+    margin: 5px 0px;
+    background-color: darkgrey;
+    font-family: sans-serif;
+    /* list-style-type: disc; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.list-group li button{
+    /* .list-group is the parent
+    li is the child
+    button is the grand child */
+    background-color: #fff;
+
+}
+.list-group > span{
+    background-color: green;
+    color: cornsilk;
+    padding: 10px;
+    border-radius: 50px;
+    border-top-right-radius: 0px;
+    display: inline-block;
+}
+
+
+/* Universal Selectors */
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+
+}
+#group * .item{
+    box-shadow: 0 0 15px green;
+    /* this affects every items in the group element because of the asterisks that follows it; */
+}
+/* Pseudo Selectors */
+section{
+    padding: 30px 10%;
+}
+section h1{
+    font-size: 20px;
+    padding: 20px;
+    font-family: 'Comforter', cursive;
+}
+section h1 span{
+    color: #777;
+}
+section p{
+    padding: 20px 0px;
+}
+/* -Pseudo Class */
+/* based on position */
+section p:nth-child(2){
+border-left: 3px solid yellow ;
+/* background-color: tomato; */
+padding: 20px;
+}
+/* Based on State */
+section p:hover{
+    border-left: 3px solid #a8a7a2;
+    padding: 20px;
+    /* opacity: 0.5; */
+    color: red
+}
+section p:active{
+    color: royalblue;
+    /* not really necessary except in animations.. becues of the click */
+}
+form{
+    padding: 30px 10%;
+}
+
+form input{
+    display:block;
+    width: 200px;
+    height: 45px;
+    margin-bottom: 0px;
+    padding: 15px;
+    border-radius: 15px;
+    outline-color: blue;
+    outline-style: dotted;
+    border: 0px solid
+}
+form :focus{
+    border-color: royalblue;
+    box-shadow: 0 0 15px blue;
+}
+form input:focus::placeholder{
+color:blue
+}
+/* -pseudo Elements */
+/* Siblings Selectors */
+/* Adjacent siblings selectors */
+section ~ h1{
+    color: crimson;
+}
+section + h1{
+    color: blue;
+
+}
+section ~ div{
+    color: brown;
+}
+/* WildCads Selectors */
+/* Selctors by Combination  */
